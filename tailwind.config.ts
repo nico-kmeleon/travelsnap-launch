@@ -108,6 +108,14 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'drift-right': {
+					'0%': { transform: 'translateX(-5%)' },
+					'100%': { transform: 'translateX(5%)' }
+				},
+				'drift-left': {
+					'0%': { transform: 'translateX(5%)' },
+					'100%': { transform: 'translateX(-5%)' }
 				}
 			},
 			animation: {
@@ -116,7 +124,9 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out forwards',
 				'fade-in-slow': 'fade-in-slow 1.2s ease-out forwards',
 				'pulse-soft': 'pulse-soft 3s infinite ease-in-out',
-				'float': 'float 6s infinite ease-in-out'
+				'float': 'float 6s infinite ease-in-out',
+				'drift-right': 'drift-right 15s infinite alternate ease-in-out',
+				'drift-left': 'drift-left 15s infinite alternate ease-in-out'
 			},
 			backdropBlur: {
 				xs: '2px',

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Camera, Globe, MapPin } from 'lucide-react';
+import { Camera, Globe, MapPin, Cloud, Sun, Mountain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Hero: React.FC = () => {
@@ -12,12 +12,14 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-[90vh] pt-24 pb-16 flex flex-col items-center justify-center overflow-hidden">
-      {/* Background gradient */}
+      {/* Background patterns */}
       <div className="absolute inset-0 bg-gradient-to-b from-travelsnap-light-blue/20 to-white/0 -z-10"></div>
+      <div className="absolute inset-0 bg-dot-pattern opacity-40 -z-10"></div>
       
       {/* Decorative elements */}
       <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-travelsnap-blue/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-1/4 right-1/6 w-96 h-96 bg-travelsnap-light-blue/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-wave-pattern bg-repeat-x opacity-30 -z-10"></div>
       
       {/* Floating icons */}
       <Camera className={cn(
@@ -31,6 +33,18 @@ const Hero: React.FC = () => {
       <MapPin className={cn(
         "absolute text-travelsnap-blue/20 w-10 h-10 top-2/3 right-1/3 transform -translate-x-1/2 -translate-y-1/2 opacity-0",
         loaded && "animate-float animate-delay-400 animate-fade-in-slow"
+      )} />
+      <Cloud className={cn(
+        "absolute text-travelsnap-blue/15 w-14 h-14 top-1/5 right-1/5 transform -translate-x-1/2 -translate-y-1/2 opacity-0",
+        loaded && "animate-float animate-delay-300 animate-fade-in-slow"
+      )} />
+      <Sun className={cn(
+        "absolute text-travelsnap-blue/10 w-12 h-12 bottom-1/5 left-1/5 transform translate-x-1/2 translate-y-1/2 opacity-0",
+        loaded && "animate-float animate-delay-500 animate-fade-in-slow"
+      )} />
+      <Mountain className={cn(
+        "absolute text-travelsnap-blue/20 w-16 h-16 bottom-1/4 left-1/3 transform translate-x-1/2 translate-y-1/2 opacity-0",
+        loaded && "animate-float animate-delay-600 animate-fade-in-slow"
       )} />
       
       {/* Content container */}
